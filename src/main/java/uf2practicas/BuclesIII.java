@@ -45,9 +45,9 @@ public class BuclesIII {
                 case 6:
                     Ex6();
                     break;
-//                case 7:
-//                    Ex7();
-//                    break;
+               case 7:
+                   Ex7();
+                    break;
                 case 0:
                     System.out.println("Good Bye");
                     System.exit(0);
