@@ -355,7 +355,7 @@ public class BuclesIII {
             }
 
         } while (!datosCorrectos);
-        // Fin de la recogida de datos //////////////////////////////////
+        // Fin de la recogida de datos /////////////
 
         System.out.print("Entre las " + primeraHora + ":00h del " + nombrePrimerDia);
         System.out.print(" y las " + segundaHora + ":00h del " + nombreSegundoDia);
