@@ -185,181 +185,191 @@ public class BuclesIII {
 
     static void Ex6() {
 
-        int primerDia = 0;
-        int segundoDia = 0;
-        int primeraHora = 0;
-        int segundaHora = 0;
-        String primerDiaString;
-        String segundoDiaString;
-        String nombrePrimerDia = "";
-        String nombreSegundoDia = "";
-        boolean datosCorrectos = true;
+        System.out.println("\n");
+        System.out.println("---------- EXERCISE 06 ----------\n");
 
-        // Recogida de datos ////////////////////////////////////////////
+        int firstDay = 0;
+        int secondDay = 0;
+        int firstHour = 0;
+        int secondHour = 0;
+        String firstDays;
+        String secondDays;
+        String nameDay1 = "";
+        String nameDay2 = "";
+        boolean Correct = true;
+
 
         do {
-            System.out.println("\nPor favor, introduzca la primera hora.");
+            //System.out.print("Insert first hour: ");
+            //firstHour= sc.nextInt();
+            boolean okDay;
 
-            boolean diaCorrecto;
-
-            // Primer día /////////////////////////////////////////////////
             do {
 
-                diaCorrecto = true;
+                okDay = true;
 
-                System.out.print("Día: ");
-                primerDiaString = System.console().readLine();
+                System.out.print("Insert the first day: ");
+                firstDays = sc.next();
 
-                switch (primerDiaString) {
-                    case "lunes":
+                switch (firstDays) {
+                    case "monday":
                     case "1":
-                        primerDia = 1;
-                        nombrePrimerDia = "lunes";
+                        firstDay = 1;
+                        nameDay1 = "monday";
                         break;
-                    case "martes":
+                    case "tuesday":
                     case "2":
-                        primerDia = 2;
-                        nombrePrimerDia = "martes";
+                        firstDay = 2;
+                        nameDay1 = "tuesday";
                         break;
-                    case "miércoles":
+                    case "wednesday":
                     case "3":
-                        primerDia = 3;
-                        nombrePrimerDia = "miercoles";
+                        firstDay = 3;
+                        nameDay1 = "wednesday";
                         break;
-                    case "jueves":
+                    case "thursday":
                     case "4":
-                        primerDia = 4;
-                        nombrePrimerDia = "jueves";
+                        firstDay = 4;
+                        nameDay1 = "thursday";
                         break;
-                    case "viernes":
+                    case "friday":
                     case "5":
-                        primerDia = 5;
-                        nombrePrimerDia = "viernes";
+                        firstDay = 5;
+                        nameDay1 = "friday";
                         break;
-                    case "sábado":
+                    case "saturday":
                     case "6":
-                        primerDia = 6;
-                        nombrePrimerDia = "sábado";
+                        firstDay = 6;
+                        nameDay1 = "saturday";
                         break;
-                    case "domingo":
+                    case "sunday":
                     case "7":
-                        primerDia = 7;
-                        nombrePrimerDia = "domingo";
+                        firstDay = 7;
+                        nameDay1 = "sunday";
                         break;
                     default:
-                        diaCorrecto = false;
+                        okDay = false;
                 }
 
-                if (!diaCorrecto) {
-                    System.out.println("No se ha introducido correctamente el día de la semana.");
-                    System.out.print("Los días válidos son: lunes, martes, miércoles, ");
-                    System.out.println("jueves, viernes, sábado y domingo.");
+                if (!okDay) {
+                    System.out.println("[ERROR] Insert a day of the week");
                 }
 
-            } while (!diaCorrecto);
+            } while (!okDay);
 
-            // Primera hora ///////////////////////////////////////////////
-
-            boolean horaCorrecta;
+            boolean correctHour;
 
             do {
-                horaCorrecta = true;
-                System.out.print("Hora: ");
-                primeraHora = Integer.parseInt(System.console().readLine());
-                if ((primeraHora < 0) || (primeraHora > 23)) {
-                    System.out.println("No se ha introducido correctamente la hora del día.");
-                    System.out.println("Las horas válidas están entre 0 y 23.");
-                    horaCorrecta = false;
+                correctHour = true;
+                System.out.print("Insert the first hour: ");
+                firstHour = sc.nextInt();
+                if ((firstHour < 0) || (firstHour > 23)) {
+                    System.out.println("[ERROR] Insert an hour of the day between 0 to 23");
+                    correctHour = false;
                 }
-            } while (!horaCorrecta);
+            } while (!correctHour);
 
-            System.out.println("Por favor, introduzca la segunda hora.");
-
-            // Segundo día ////////////////////////////////////////////////
             do {
 
-                datosCorrectos = true;
+                Correct = true;
 
-                diaCorrecto = true;
+                okDay = true;
 
-                System.out.print("Día: ");
-                segundoDiaString = System.console().readLine();
+                System.out.print("Insert the second day: ");
+                secondDays = sc.next();
 
-                switch (segundoDiaString) {
-                    case "lunes":
+                switch (secondDays) {
+                    case "monday":
                     case "1":
-                        segundoDia = 1;
-                        nombreSegundoDia = "lunes";
+                        secondDay = 1;
+                        nameDay2 = "monday";
                         break;
-                    case "martes":
+                    case "tuesday":
                     case "2":
-                        segundoDia = 2;
-                        nombreSegundoDia = "martes";
+                        secondDay = 2;
+                        nameDay2 = "tuesday";
                         break;
-                    case "miércoles":
+                    case "wednesday":
                     case "3":
-                        segundoDia = 3;
-                        nombreSegundoDia = "miércoles";
+                        secondDay = 3;
+                        nameDay2 = "wednesday";
                         break;
-                    case "jueves":
+                    case "thursday":
                     case "4":
-                        segundoDia = 4;
-                        nombreSegundoDia = "jueves";
+                        secondDay = 4;
+                        nameDay2 = "thursday";
                         break;
-                    case "viernes":
+                    case "friday":
                     case "5":
-                        segundoDia = 5;
-                        nombreSegundoDia = "viernes";
+                        secondDay = 5;
+                        nameDay2 = "friday";
                         break;
-                    case "sábado":
+                    case "saturday":
                     case "6":
-                        segundoDia = 6;
-                        nombreSegundoDia = "sábado";
+                        secondDay = 6;
+                        nameDay2 = "saturday";
                         break;
-                    case "domingo":
+                    case "sunday":
                     case "7":
-                        segundoDia = 7;
-                        nombreSegundoDia = "domingo";
+                        secondDay = 7;
+                        nameDay2 = "sunday";
                         break;
                     default:
-                        segundoDia = 0;
+                        secondDay = 0;
                 }
 
-                if (!diaCorrecto) {
-                    System.out.println("No se ha introducido correctamente el día de la semana.");
-                    System.out.print("Los días válidos son: lunes, martes, miércoles, ");
-                    System.out.println("jueves, viernes, sábado y domingo.");
+                if (!okDay) {
+                    System.out.println("[ERROR] Insert a day of the week");
                 }
 
-            } while (!diaCorrecto);
+            } while (!okDay);
 
-            // Comprueba que el segundo día sea posterior al primero //////
-            if (segundoDia <= primerDia) {
-                System.out.println("El segundo día debe ser posterior al primero.");
-                datosCorrectos = false;
+            if (secondDay <= firstDay) {
+                System.out.println("Second day must be later than first");
+                Correct = false;
             }
 
-            // Segunda hora ///////////////////////////////////////////////
-            if (datosCorrectos) {
+            if (Correct) {
                 do {
-                    horaCorrecta = true;
-                    System.out.print("Hora: ");
-                    segundaHora = Integer.parseInt(System.console().readLine());
-                    if ((segundaHora < 0) || (segundaHora > 23)) {
-                        System.out.println("No se ha introducido correctamente la hora del día.");
-                        System.out.println("Las horas válidas están entre 0 y 23.");
-                        horaCorrecta = false;
+                    correctHour = true;
+                    System.out.print("Hour: ");
+                    secondHour = sc.nextInt();
+                    if ((secondHour < 0) || (secondHour > 23)) {
+                        System.out.println("[ERROR] Insert an hour of the day between 0 to 23");
+                        correctHour = false;
                     }
-                } while (!horaCorrecta);
+                } while (!correctHour);
 
             }
 
-        } while (!datosCorrectos);
-        // Fin de la recogida de datos /////////////
+        } while (!Correct);
+        System.out.print("Between " + firstHour + ":00h from " + nameDay1 + " and  " + secondHour + ":00h to " + nameDay2 + " are " + (((secondDay * 24) + secondHour) - ((firstDay * 24) + firstHour)) + " hours");
+    }
 
-        System.out.print("Entre las " + primeraHora + ":00h del " + nombrePrimerDia);
-        System.out.print(" y las " + segundaHora + ":00h del " + nombreSegundoDia);
-        System.out.println(" hay " + (((segundoDia * 24) + segundaHora) - ((primerDia * 24) + primeraHora)) + " hora/s.");
+    static void Ex7(){
+
+        int number;
+
+        System.out.println("\n");
+        System.out.println("---------- EXERCISE 07 ----------\n");
+        System.out.println("Insert the value for print L: ");
+        number = sc.nextInt();
+
+        for(int i=0;i<number;i++)
+        {
+            for(int j=0;j<number;j++)
+            {
+                if(i>=0&&i<number-1&&j==0||i==number-1&&j>0)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
 
