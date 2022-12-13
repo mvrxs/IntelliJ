@@ -92,7 +92,7 @@ public class BuclesIII {
         String character;
 
         System.out.println("\n");
-        System.out.println("---------- EXERCISE 01 ----------\n");
+        System.out.println("---------- EXERCISE 02 ----------\n");
         System.out.print("insert the number of rows for our pyramid: ");
         rows = sc.nextInt();
         System.out.print("insert the character for form our pyramid: ");
